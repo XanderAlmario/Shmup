@@ -12,3 +12,4 @@
 12. Give them a rigid body 2d and check Freeze Rotation and Freeze Position
 
 Locations of items will be place found in the picture in this branch
+Note: Gray is Enemy1 and Green is Enemy2
