@@ -1,0 +1,14 @@
+1. Create empty game objects EnemyType1 and EnemyType2 and tag them Enemy
+2. Give both a sprite renderer (will give assets eventually for now just have a temp one)
+3. Give both a box collider 2d and check Is Trigger
+4. Give both a rigid body 2d and check Freeze Rotation and Freeze Position
+5. Place their respective movment scripts in the correct enemy
+6. Make an Enemy layer and go to setting uncheck the enemy and border (same kay xander before)
+7. Make empty game objects Enemy1Spawner and Enemy2Spawner
+8. Give their respective spawner scripts and make both a child of main camera
+9. Make the enemies into prefabs and add to their respective spawners
+10. Create 2 Despawners (DespawnerBottom and DespawnerSide) and tag them as Despawner
+11. Give them a box collider 2d
+12. Give them a rigid body 2d and check Freeze Rotation and Freeze Position
+
+Locations of items will be place found in the picture in this branch
