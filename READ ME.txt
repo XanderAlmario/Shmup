@@ -1,0 +1,21 @@
+***PLAYER CONTROLLER***
+1. Make a folder called Scripts in Assets folder(to be organized)
+2. Go to Project Settings and under Editor, scroll down to "C# Project Generation" and set the root namespace to "Shmup"
+3. Add BulletPool, PlayerController, CameraController, ParallaxController to Scripts folder
+4. Create empty 2D objects and name them "Background" and "Player"
+5. For Background, drag and set each layer of the background as a child of the object and make ParallaxController a component of Background(the object)
+6. For each layer, select it in the hierarchy, then set the "Order in Layer" appropriately and under Sprite Renderer, set the "Draw Mode" to Tiled and set either the width or height to a big number, depending on the pic so that the pic can be repeated vertically
+7. Click on the Background object and set it's position so that the cam is at the most bottom of the background (you can give it a little space if you want to be sure)
+8. Drag the CameraController to become a component of Main Camera
+9. Make the Player object a child of the Main Camera and drag the PlayerController to become a component of Player
+10. Add a Box Collider 2D component to Player and adjust the size of the collider accordingly
+11. Add a Rigidbody 2D component to Player and set the Gravity Scale to 0 and check the Freeze Rotation under Constraints
+12. Drag the Rigidbody 2D to the "Rb" serialize field under PlayerController
+13. Make a square object by right clicking on the hierarchy and going to 2D Objects > Sprites > Square and add a Box Collider 2D to it and set its "Order in Layer" to -1 and put it in a Layer called "Border"
+14. Duplicate it three times to have four squares, and name them "Top", "Bottom", "Right", and "Left"
+15. Make the four square objects children of Main Camera and set them to cover their respective borders on the camera (top covers the top, bottom covers the bottom, etc.). Make sure that they are inside the borders of the camera
+16. Make another sqaure object and name it "Bullet", put it in a Layer called "Bullet", add a Box Collider 2D, and make it a prefab
+17. Make another child of Main camera that is an empty 2D object called "BulletPool" and add the BulletPool script to it
+18. Add the Bullet prefab to the serialize field of BulletPool
+19. Add the BulletPool object to the serialize field of PlayerController
+20. Go to Edit > Project Settings and from there, go to Physics 2D > Layer Collision Matrix and uncheck the boxes for Bullet/Border and Bullet/Bullet (this is so that Bullets can't collide with the border and other bullets)
